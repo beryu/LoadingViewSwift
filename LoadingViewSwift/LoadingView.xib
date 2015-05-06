@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Gnb-F5-iWr" customClass="LoadingView" customModule="LoadingViewSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qJ-5D-oaC">
+                    <rect key="frame" x="110" y="234" width="100" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxB-9f-cY9">
+                            <rect key="frame" x="8" y="68" width="84" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="yZP-mA-pRT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-v5-Pgd">
+                            <rect key="frame" x="30" y="30" width="40" height="40"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-p8-bZG">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oVo-wB-aOZ"/>
+                                <constraint firstAttribute="width" constant="40" id="r6T-sf-yVP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="AxB-9f-cY9" secondAttribute="trailing" constant="8" id="DcY-7b-d8y"/>
+                        <constraint firstAttribute="width" constant="100" id="RJ6-8y-Nhz"/>
+                        <constraint firstAttribute="centerY" secondItem="PcY-v5-Pgd" secondAttribute="centerY" id="ShV-oJ-3N0"/>
+                        <constraint firstItem="AxB-9f-cY9" firstAttribute="leading" secondItem="2qJ-5D-oaC" secondAttribute="leading" constant="8" id="X8y-Tm-Ayq"/>
+                        <constraint firstAttribute="bottom" secondItem="AxB-9f-cY9" secondAttribute="bottom" id="XHg-YF-9f2"/>
+                        <constraint firstAttribute="height" constant="100" id="wFg-fx-7C3"/>
+                        <constraint firstAttribute="centerX" secondItem="PcY-v5-Pgd" secondAttribute="centerX" id="yLr-hq-DYx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="2qJ-5D-oaC" secondAttribute="centerX" id="fc1-Y0-pP1"/>
+                <constraint firstAttribute="centerY" secondItem="2qJ-5D-oaC" secondAttribute="centerY" id="pKJ-Wu-Nce"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="backgroundView" destination="2qJ-5D-oaC" id="sAt-Q4-X3V"/>
+                <outlet property="hudContainerView" destination="PcY-v5-Pgd" id="Dnq-bs-qix"/>
+                <outlet property="hudView" destination="I6f-p8-bZG" id="joX-zh-93b"/>
+                <outlet property="messageLabel" destination="AxB-9f-cY9" id="aXy-H4-P06"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="Loading" width="114" height="114"/>
+    </resources>
+</document>
